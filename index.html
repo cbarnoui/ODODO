@@ -13,6 +13,8 @@
 			margin: 0px; 
 			overflow: hidden; 
 			background-color: black;
+			overscroll-behavior: none;   /* stops pull-to-refresh from cancelling a touch */
+			-webkit-tap-highlight-color: transparent;
 		}
 		canvas.game_canvas { 
 			border: 0px none; 
@@ -22,6 +24,10 @@
 			margin-left: auto;
 			margin-right: auto;
 			display: block;
+			touch-action: none;
+			user-select: none;
+			-webkit-user-select: none;
+			-webkit-touch-callout: none;
 		}
 	</style>
 	<link rel="manifest" href="manifest.json">

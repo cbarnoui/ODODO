@@ -1,10 +1,14 @@
-const CACHE = "ododo-v0";
+const CACHE = "ododo-v2";
 const FILES = [
   ".",
   "index.html",
   "app.wasm",
   "odin.js",
-  "icon-192.png"
+  "icon-192.png",
+  "assets/Sounds/positive-blip-effect.wav",
+  "assets/Sounds/failureLoud.wav",
+  "assets/Sounds/click.wav",
+  "assets/Sounds/confirmed.wav",
 ];
 
 self.addEventListener("install", e => {
