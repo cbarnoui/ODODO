@@ -66,7 +66,13 @@
 			// done setting up. At that point we can run code.
 			onRuntimeInitialized: () => {
 				var e = wasmExports;
-
+				var dbg = document.createElement('div');
+				dbg.style.cssText = 'position:fixed;top:0;left:0;z-index:9;color:#0f0;font:12px monospace;pointer-events:none';
+				document.body.appendChild(dbg);
+				setInterval(function () {
+				dbg.textContent = 'heap ' + (e.memory.buffer.byteLength / 1048576).toFixed(0) +
+									' MB  t=' + (performance.now() / 1000 | 0) + 's';
+				}, 500);
 				// Calls any procedure marked with @init
 				e._start();
 
