@@ -1,9 +1,8 @@
 {
-  "id": "/old/",
   "name": "ODODO Old",
   "short_name": "ODODO Old",
-  "start_url": "/old/",
-  "scope": "/old/",
+  "start_url": ".",
+  "scope": ".",
   "display": "fullscreen",
   "background_color": "#464996",
   "theme_color": "#000000",

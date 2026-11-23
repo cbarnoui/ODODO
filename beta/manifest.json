@@ -1,9 +1,8 @@
 {
-  "id": "/beta/",
   "name": "ODODO beta",
   "short_name": "ODODO beta",
-  "start_url": "/beta/",
-  "scope": "/beta/",
+  "start_url": ".",
+  "scope": ".",
   "display": "fullscreen",
   "background_color": "#464996",
   "theme_color": "#000000",
