@@ -7,7 +7,7 @@ const FILES = [
   "index.wasm",
   "index.data",
   "odin.js",
-  "icon-192.png",
+  "../icon-192.png",
   "assets/Sounds/positive-blip-effect.wav",
   "assets/Sounds/failureLoud.wav",
   "assets/Sounds/click.wav",
