@@ -1,4 +1,5 @@
-const CACHE = "ododo-v3";
+const PREFIX = "ododo-";
+const CACHE = PREFIX + "v4";
 const FILES = [
   ".",
   "index.html",
@@ -21,7 +22,9 @@ self.addEventListener("install", e => {
 self.addEventListener("activate", e => {
   e.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
+      .then(keys => Promise.all(
+        keys.filter(k => k.startsWith(PREFIX) && k !== CACHE).map(k => caches.delete(k))
+      ))
       .then(() => self.clients.claim())
   );
 });
